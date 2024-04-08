@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const protocolos_routes_1 = __importDefault(require("../../../modules/user/routes/protocolos.routes"));
+const avisos_routes_1 = __importDefault(require("../../../modules/user/routes/avisos.routes"));
+const users_routes_1 = __importDefault(require("../../../modules/user/routes/users.routes"));
+const express_1 = require("express");
+const ata_routes_1 = __importDefault(require("../../../modules/user/routes/ata.routes"));
+const carteiraServicos_routes_1 = __importDefault(require("../../../modules/user/routes/carteiraServicos.routes"));
+const comissaoEmergencia_routes_1 = __importDefault(require("../../../modules/user/routes/comissaoEmergencia.routes"));
+const routes = (0, express_1.Router)();
+routes.use('/users', users_routes_1.default);
+routes.use('/avisos', avisos_routes_1.default);
+routes.use('/protocolos', protocolos_routes_1.default);
+routes.use('/ata', ata_routes_1.default);
+routes.use('/carteiraservicos', carteiraServicos_routes_1.default);
+routes.use('/comissaoemergencia', comissaoEmergencia_routes_1.default);
+exports.default = routes;
