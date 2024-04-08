@@ -17,8 +17,8 @@ const auth_1 = __importDefault(require("../../../config/auth"));
 const AppError_1 = __importDefault(require("../../../shared/erros/AppError"));
 const User_1 = __importDefault(require("../mongoose/User"));
 class CheckAuthService {
-    execute({ token }) {
-        return __awaiter(this, void 0, void 0, function* () {
+    execute(_a) {
+        return __awaiter(this, arguments, void 0, function* ({ token }) {
             if (!token) {
                 throw new AppError_1.default('Token não informado');
             }
@@ -27,7 +27,7 @@ class CheckAuthService {
             try {
                 decodeToken = (0, jsonwebtoken_1.verify)(tokenSplited[1], auth_1.default.jwt.secret);
             }
-            catch (_a) {
+            catch (_b) {
                 throw new AppError_1.default('Token invalido');
             }
             const { id, nome, usuario, isAdmin, resetarSenha, permissoes } = decodeToken;

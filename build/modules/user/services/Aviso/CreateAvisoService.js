@@ -16,8 +16,8 @@ const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"))
 const Avisos_1 = __importDefault(require("../../mongoose/Avisos"));
 const cache_1 = __importDefault(require("../../../../config/cache"));
 class CreateAvisoService {
-    execute({ titulo, tipo, conteudo, data, }) {
-        return __awaiter(this, void 0, void 0, function* () {
+    execute(_a) {
+        return __awaiter(this, arguments, void 0, function* ({ titulo, tipo, conteudo, data, }) {
             if (!titulo || !tipo || !conteudo || !data) {
                 throw new AppError_1.default('Campos obrigatórios não preenchidos');
             }

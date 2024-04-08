@@ -16,8 +16,8 @@ const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"))
 const Protocolo_1 = __importDefault(require("../../mongoose/Protocolo"));
 const cache_1 = __importDefault(require("../../../../config/cache"));
 class CreateProtocoloService {
-    execute({ titulo, link }) {
-        return __awaiter(this, void 0, void 0, function* () {
+    execute(_a) {
+        return __awaiter(this, arguments, void 0, function* ({ titulo, link }) {
             if (!titulo || !link) {
                 throw new AppError_1.default('Campos obrigatórios não preenchidos');
             }

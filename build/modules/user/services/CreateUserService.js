@@ -17,8 +17,8 @@ const User_1 = __importDefault(require("../mongoose/User"));
 const bcrypt_1 = require("bcrypt");
 const cache_1 = __importDefault(require("../../../config/cache"));
 class CreateUserService {
-    execute({ nome, usuario, senha, confirmSenha, unidade, setor, funcao, contato, isAdmin, resetarSenha, permissoes, }) {
-        return __awaiter(this, void 0, void 0, function* () {
+    execute(_a) {
+        return __awaiter(this, arguments, void 0, function* ({ nome, usuario, senha, confirmSenha, unidade, setor, funcao, contato, isAdmin, resetarSenha, permissoes, }) {
             if (!nome ||
                 !usuario ||
                 !senha ||

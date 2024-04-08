@@ -15,8 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"));
 const AtaCoordenadores_1 = __importDefault(require("../../mongoose/AtaCoordenadores"));
 class ShowAtaService {
-    execute({ id }) {
-        return __awaiter(this, void 0, void 0, function* () {
+    execute(_a) {
+        return __awaiter(this, arguments, void 0, function* ({ id }) {
             if (!id) {
                 throw new AppError_1.default('ID do aviso não informado');
             }
