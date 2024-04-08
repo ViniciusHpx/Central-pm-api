@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const conection = mongoose
   .connect(
-    'mongodb+srv://datalabsms:4n4rc0@cluster0.sx594ak.mongodb.net/?retryWrites=true&w=majority',
+    'mongodb+srv://viniciushpx150:97d5QZe1en76xsq8@cluster0.1h6p0ht.mongodb.net/?retryWrites=true&w=majority',
   )
   .then(() => {
     console.log('Banco de dadods conectado !');
