@@ -16,8 +16,8 @@ const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"))
 const cache_1 = __importDefault(require("../../../../config/cache"));
 const CarteiraServicos_1 = __importDefault(require("../../mongoose/CarteiraServicos"));
 class DeleteCarteiraServicoService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ id }) {
+    execute({ id }) {
+        return __awaiter(this, void 0, void 0, function* () {
             const carteiraServicoExiste = yield CarteiraServicos_1.default.findOne({ _id: id });
             if (!carteiraServicoExiste) {
                 throw new AppError_1.default('Carteira de Servicos não encontrado');

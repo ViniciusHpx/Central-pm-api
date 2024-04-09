@@ -18,8 +18,8 @@ const bcrypt_1 = require("bcrypt");
 const jsonwebtoken_1 = require("jsonwebtoken");
 const auth_1 = __importDefault(require("../../../config/auth"));
 class CreateSessionService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ usuario, senha }) {
+    execute({ usuario, senha }) {
+        return __awaiter(this, void 0, void 0, function* () {
             if (!usuario) {
                 throw new AppError_1.default('Usuário não informado');
             }

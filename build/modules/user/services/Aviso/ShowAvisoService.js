@@ -15,8 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"));
 const Avisos_1 = __importDefault(require("../../mongoose/Avisos"));
 class ShowAvisoService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ id }) {
+    execute({ id }) {
+        return __awaiter(this, void 0, void 0, function* () {
             if (!id) {
                 throw new AppError_1.default('ID do aviso não informado');
             }

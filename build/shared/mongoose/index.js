@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const conection = mongoose_1.default
-    .connect('mongodb+srv://viniciushpx150:97d5QZe1en76xsq8@cluster0.1h6p0ht.mongodb.net/?retryWrites=true&w=majority')
+    .connect('mongodb+srv://viniciushpx150:97d5QZe1en76xsq@cluster0.1h6p0ht.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => {
     console.log('Banco de dadods conectado !');
 })

@@ -16,8 +16,8 @@ const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"))
 const Protocolo_1 = __importDefault(require("../../mongoose/Protocolo"));
 const cache_1 = __importDefault(require("../../../../config/cache"));
 class DeleteProtocoloService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ id }) {
+    execute({ id }) {
+        return __awaiter(this, void 0, void 0, function* () {
             const protocoloExiste = yield Protocolo_1.default.findOne({ _id: id });
             if (!protocoloExiste) {
                 throw new AppError_1.default('Aviso não encontrado');

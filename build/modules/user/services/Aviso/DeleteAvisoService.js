@@ -16,8 +16,8 @@ const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"))
 const Avisos_1 = __importDefault(require("../../mongoose/Avisos"));
 const cache_1 = __importDefault(require("../../../../config/cache"));
 class DeleteAvisoService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ id }) {
+    execute({ id }) {
+        return __awaiter(this, void 0, void 0, function* () {
             const avisoExiste = yield Avisos_1.default.findOne({ _id: id });
             if (!avisoExiste) {
                 throw new AppError_1.default('Aviso não encontrado');

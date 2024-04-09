@@ -19,8 +19,8 @@ const User_1 = __importDefault(require("../mongoose/User"));
 const bcrypt_1 = require("bcrypt");
 const cache_1 = __importDefault(require("../../../config/cache"));
 class ChangePasswordService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ token, senha, senhaConfirm, }) {
+    execute({ token, senha, senhaConfirm, }) {
+        return __awaiter(this, void 0, void 0, function* () {
             if (!token || !senha || !senhaConfirm) {
                 throw new AppError_1.default('token, senha ou senha de confirmação não enviados');
             }
@@ -29,7 +29,7 @@ class ChangePasswordService {
             try {
                 decodeToken = (0, jsonwebtoken_1.verify)(tokenSplited[1], auth_1.default.jwt.secret);
             }
-            catch (_b) {
+            catch (_a) {
                 throw new AppError_1.default('Token invalido');
             }
             const { id, nome, usuario, isAdmin, resetarSenha, permissoes } = decodeToken;

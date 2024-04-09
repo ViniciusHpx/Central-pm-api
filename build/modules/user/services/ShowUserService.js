@@ -15,8 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const AppError_1 = __importDefault(require("../../../shared/erros/AppError"));
 const User_1 = __importDefault(require("../mongoose/User"));
 class ShowUsersService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ id }) {
+    execute({ id }) {
+        return __awaiter(this, void 0, void 0, function* () {
             if (!id) {
                 throw new AppError_1.default('ID do usuário não informado');
             }

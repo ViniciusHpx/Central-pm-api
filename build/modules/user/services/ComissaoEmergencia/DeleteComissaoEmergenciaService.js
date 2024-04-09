@@ -16,8 +16,8 @@ const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"))
 const cache_1 = __importDefault(require("../../../../config/cache"));
 const ComissaoEmergencia_1 = __importDefault(require("../../mongoose/ComissaoEmergencia"));
 class DeleteComissaoEmergenciaService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ id }) {
+    execute({ id }) {
+        return __awaiter(this, void 0, void 0, function* () {
             const comissaoEmergenciaExiste = yield ComissaoEmergencia_1.default.findOne({
                 _id: id,
             });

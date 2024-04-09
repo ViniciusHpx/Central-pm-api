@@ -16,8 +16,8 @@ const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"))
 const cache_1 = __importDefault(require("../../../../config/cache"));
 const CarteiraServicos_1 = __importDefault(require("../../mongoose/CarteiraServicos"));
 class UpdateCarteiraServicosService {
-    execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ id, titulo, link, }) {
+    execute({ id, titulo, link, }) {
+        return __awaiter(this, void 0, void 0, function* () {
             if (!id) {
                 throw new AppError_1.default('Não informado');
             }
