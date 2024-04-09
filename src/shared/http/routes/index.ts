@@ -5,6 +5,7 @@ import { Router } from 'express';
 import ataRouter from '../../../modules/user/routes/ata.routes';
 import carteiraServicosRouter from '../../../modules/user/routes/carteiraServicos.routes';
 import comissaoEmergenciaRouter from '../../../modules/user/routes/comissaoEmergencia.routes';
+import lancamentosRouter from '../../../modules/user/routes/lancamentos';
 
 const routes = Router();
 
@@ -14,5 +15,6 @@ routes.use('/protocolos', protocoloRouter);
 routes.use('/ata', ataRouter);
 routes.use('/carteiraservicos', carteiraServicosRouter);
 routes.use('/comissaoemergencia', comissaoEmergenciaRouter);
+routes.use('/lancamentos', lancamentosRouter);
 
 export default routes;
