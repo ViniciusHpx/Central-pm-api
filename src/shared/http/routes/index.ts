@@ -6,7 +6,7 @@ import ataRouter from '../../../modules/user/routes/ata.routes';
 import carteiraServicosRouter from '../../../modules/user/routes/carteiraServicos.routes';
 import comissaoEmergenciaRouter from '../../../modules/user/routes/comissaoEmergencia.routes';
 import lancamentosRouter from '../../../modules/user/routes/lancamentos';
-import planoMunicipalDeSaudeRouter from 'src/modules/user/routes/planoMunicipalDeSaude.routes';
+import planoMunicipalDeSaudeRouter from '../../../modules/user/routes/planoMunicipalDeSaude.routes';
 
 const routes = Router();
 

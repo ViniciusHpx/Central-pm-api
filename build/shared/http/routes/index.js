@@ -11,7 +11,7 @@ const ata_routes_1 = __importDefault(require("../../../modules/user/routes/ata.r
 const carteiraServicos_routes_1 = __importDefault(require("../../../modules/user/routes/carteiraServicos.routes"));
 const comissaoEmergencia_routes_1 = __importDefault(require("../../../modules/user/routes/comissaoEmergencia.routes"));
 const lancamentos_1 = __importDefault(require("../../../modules/user/routes/lancamentos"));
-const planoMunicipalDeSaude_routes_1 = __importDefault(require("src/modules/user/routes/planoMunicipalDeSaude.routes"));
+const planoMunicipalDeSaude_routes_1 = __importDefault(require("../../../modules/user/routes/planoMunicipalDeSaude.routes"));
 const routes = (0, express_1.Router)();
 routes.use('/users', users_routes_1.default);
 routes.use('/avisos', avisos_routes_1.default);
