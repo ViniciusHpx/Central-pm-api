@@ -7,6 +7,7 @@ import carteiraServicosRouter from '../../../modules/user/routes/carteiraServico
 import comissaoEmergenciaRouter from '../../../modules/user/routes/comissaoEmergencia.routes';
 import lancamentosRouter from '../../../modules/user/routes/lancamentos';
 import planoMunicipalDeSaudeRouter from '../../../modules/user/routes/planoMunicipalDeSaude.routes';
+import programacaoAnual2022Router from '../../../modules/user/routes/programacaoAnual2022.routes';
 
 const routes = Router();
 
@@ -18,5 +19,6 @@ routes.use('/carteiraservicos', carteiraServicosRouter);
 routes.use('/comissaoemergencia', comissaoEmergenciaRouter);
 routes.use('/lancamentos', lancamentosRouter);
 routes.use('/planoMunicipalDeSaude', planoMunicipalDeSaudeRouter);
+routes.use('/programacaoAnual2022', programacaoAnual2022Router);
 
 export default routes;
