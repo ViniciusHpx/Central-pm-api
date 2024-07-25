@@ -24,7 +24,7 @@ class DeleteProgramacaoAnual2022 {
             if (!programacaoAnual2022Existe) {
                 throw new AppError_1.default('Plano Municipal não encontrado');
             }
-            cache_1.default.del('planoMunicipalDeSaude');
+            cache_1.default.del('programacaoAnual2022');
             yield ProgramacaoAnual2022_1.default.deleteOne({ _id: id });
         });
     }
