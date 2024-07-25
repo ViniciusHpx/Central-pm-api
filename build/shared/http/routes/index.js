@@ -12,6 +12,7 @@ const carteiraServicos_routes_1 = __importDefault(require("../../../modules/user
 const comissaoEmergencia_routes_1 = __importDefault(require("../../../modules/user/routes/comissaoEmergencia.routes"));
 const lancamentos_1 = __importDefault(require("../../../modules/user/routes/lancamentos"));
 const planoMunicipalDeSaude_routes_1 = __importDefault(require("../../../modules/user/routes/planoMunicipalDeSaude.routes"));
+const programacaoAnual2022_routes_1 = __importDefault(require("../../../modules/user/routes/programacaoAnual2022.routes"));
 const routes = (0, express_1.Router)();
 routes.use('/users', users_routes_1.default);
 routes.use('/avisos', avisos_routes_1.default);
@@ -21,4 +22,5 @@ routes.use('/carteiraservicos', carteiraServicos_routes_1.default);
 routes.use('/comissaoemergencia', comissaoEmergencia_routes_1.default);
 routes.use('/lancamentos', lancamentos_1.default);
 routes.use('/planoMunicipalDeSaude', planoMunicipalDeSaude_routes_1.default);
+routes.use('/programacaoAnual2022', programacaoAnual2022_routes_1.default);
 exports.default = routes;
