@@ -9,6 +9,7 @@ import lancamentosRouter from '../../../modules/user/routes/lancamentos';
 import planoMunicipalDeSaudeRouter from '../../../modules/user/routes/planoMunicipalDeSaude.routes';
 import programacaoAnual2022Router from '../../../modules/user/routes/programacaoAnual2022.routes';
 import programacaoAnual2023Router from '../../../modules/user/routes/programacaoAnual2023.routes';
+import programacaoAnual2024Router from '../../../modules/user/routes/ProgramacaoAnual2024.routes';
 
 const routes = Router();
 
@@ -22,5 +23,6 @@ routes.use('/lancamentos', lancamentosRouter);
 routes.use('/planoMunicipalDeSaude', planoMunicipalDeSaudeRouter);
 routes.use('/programacaoAnual2022', programacaoAnual2022Router);
 routes.use('/programacaoAnual2023', programacaoAnual2023Router);
+routes.use('/programacaoAnual2024', programacaoAnual2024Router);
 
 export default routes;
