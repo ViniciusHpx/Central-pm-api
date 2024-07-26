@@ -10,6 +10,7 @@ import planoMunicipalDeSaudeRouter from '../../../modules/user/routes/planoMunic
 import programacaoAnual2022Router from '../../../modules/user/routes/programacaoAnual2022.routes';
 import programacaoAnual2023Router from '../../../modules/user/routes/programacaoAnual2023.routes';
 import programacaoAnual2024Router from '../../../modules/user/routes/ProgramacaoAnual2024.routes';
+import programacaoAnual2025Router from '../../../modules/user/routes/ProgramacaoAnual2025.routes';
 
 const routes = Router();
 
@@ -24,5 +25,6 @@ routes.use('/planoMunicipalDeSaude', planoMunicipalDeSaudeRouter);
 routes.use('/programacaoAnual2022', programacaoAnual2022Router);
 routes.use('/programacaoAnual2023', programacaoAnual2023Router);
 routes.use('/programacaoAnual2024', programacaoAnual2024Router);
+routes.use('/programacaoAnual2025', programacaoAnual2025Router);
 
 export default routes;

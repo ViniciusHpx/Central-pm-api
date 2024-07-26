@@ -15,6 +15,7 @@ const planoMunicipalDeSaude_routes_1 = __importDefault(require("../../../modules
 const programacaoAnual2022_routes_1 = __importDefault(require("../../../modules/user/routes/programacaoAnual2022.routes"));
 const programacaoAnual2023_routes_1 = __importDefault(require("../../../modules/user/routes/programacaoAnual2023.routes"));
 const ProgramacaoAnual2024_routes_1 = __importDefault(require("../../../modules/user/routes/ProgramacaoAnual2024.routes"));
+const ProgramacaoAnual2025_routes_1 = __importDefault(require("../../../modules/user/routes/ProgramacaoAnual2025.routes"));
 const routes = (0, express_1.Router)();
 routes.use('/users', users_routes_1.default);
 routes.use('/avisos', avisos_routes_1.default);
@@ -27,4 +28,5 @@ routes.use('/planoMunicipalDeSaude', planoMunicipalDeSaude_routes_1.default);
 routes.use('/programacaoAnual2022', programacaoAnual2022_routes_1.default);
 routes.use('/programacaoAnual2023', programacaoAnual2023_routes_1.default);
 routes.use('/programacaoAnual2024', ProgramacaoAnual2024_routes_1.default);
+routes.use('/programacaoAnual2025', ProgramacaoAnual2025_routes_1.default);
 exports.default = routes;
