@@ -1,26 +1,26 @@
 import AppError from '../../../../shared/erros/AppError';
-import Rdqa1 from '../../mongoose/Rdqa1';
+import Rdqa2 from '../../mongoose/Rdqa2';
 
-interface IRdqa1 {
+interface IRdqa2 {
   titulo: string;
   link: string;
 }
 interface IRequest {
   id: string;
 }
-class ShowRdqa1Service {
-  public async execute({ id }: IRequest): Promise<IRdqa1> {
+class ShowRdqa2Service {
+  public async execute({ id }: IRequest): Promise<IRdqa2> {
     if (!id) {
       throw new AppError('ID do aviso não informado');
     }
-    const rdqa1 = await Rdqa1.findOne({
+    const rdqa2 = await Rdqa2.findOne({
       _id: id,
     });
-    if (!rdqa1) {
+    if (!rdqa2) {
       throw new AppError('Link não encontrado');
     }
-    return rdqa1;
+    return rdqa2;
   }
 }
 
-export default ShowRdqa1Service;
+export default ShowRdqa2Service;

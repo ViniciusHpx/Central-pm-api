@@ -12,22 +12,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"));
-const Rdqa1_1 = __importDefault(require("../../mongoose/Rdqa1"));
-class ShowRdqa1Service {
-    execute({ id }) {
+const cache_1 = __importDefault(require("../../../../config/cache"));
+const Rdqa2_1 = __importDefault(require("../../mongoose/Rdqa2"));
+class ListRdqa2Service {
+    execute() {
         return __awaiter(this, void 0, void 0, function* () {
-            if (!id) {
-                throw new AppError_1.default('ID do aviso não informado');
+            const cachedRdqa2 = cache_1.default.get('rdqa2');
+            let rdqa2 = [];
+            if (!cachedRdqa2) {
+                rdqa2 = yield Rdqa2_1.default.find();
+                cache_1.default.set('rdqa2', JSON.stringify(rdqa2));
             }
-            const rdqa1 = yield Rdqa1_1.default.findOne({
-                _id: id,
-            });
-            if (!rdqa1) {
-                throw new AppError_1.default('Link não encontrado');
+            else {
+                rdqa2 = JSON.parse(cachedRdqa2);
             }
-            return rdqa1;
+            return rdqa2;
         });
     }
 }
-exports.default = ShowRdqa1Service;
+exports.default = ListRdqa2Service;

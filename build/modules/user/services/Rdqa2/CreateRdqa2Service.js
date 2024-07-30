@@ -13,21 +13,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"));
-const Rdqa1_1 = __importDefault(require("../../mongoose/Rdqa1"));
-class ShowRdqa1Service {
-    execute({ id }) {
+const cache_1 = __importDefault(require("../../../../config/cache"));
+const Rdqa2_1 = __importDefault(require("../../mongoose/Rdqa2"));
+class CreateRdqa2Service {
+    execute({ titulo, link }) {
         return __awaiter(this, void 0, void 0, function* () {
-            if (!id) {
-                throw new AppError_1.default('ID do aviso não informado');
+            if (!titulo || !link) {
+                throw new AppError_1.default('Campos obrigatórios não preenchidos');
             }
-            const rdqa1 = yield Rdqa1_1.default.findOne({
-                _id: id,
+            if (link.length < 3 || titulo.length < 3) {
+                throw new AppError_1.default('Titulo ou conteúdo com menos de 3 caracteres');
+            }
+            const rdqa2 = new Rdqa2_1.default({
+                titulo,
+                link,
             });
-            if (!rdqa1) {
-                throw new AppError_1.default('Link não encontrado');
-            }
-            return rdqa1;
+            yield rdqa2.save();
+            cache_1.default.del('rdqa2');
+            return rdqa2;
         });
     }
 }
-exports.default = ShowRdqa1Service;
+exports.default = CreateRdqa2Service;

@@ -13,21 +13,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const AppError_1 = __importDefault(require("../../../../shared/erros/AppError"));
-const Rdqa1_1 = __importDefault(require("../../mongoose/Rdqa1"));
-class ShowRdqa1Service {
+const Rdqa2_1 = __importDefault(require("../../mongoose/Rdqa2"));
+class ShowRdqa2Service {
     execute({ id }) {
         return __awaiter(this, void 0, void 0, function* () {
             if (!id) {
                 throw new AppError_1.default('ID do aviso não informado');
             }
-            const rdqa1 = yield Rdqa1_1.default.findOne({
+            const rdqa2 = yield Rdqa2_1.default.findOne({
                 _id: id,
             });
-            if (!rdqa1) {
+            if (!rdqa2) {
                 throw new AppError_1.default('Link não encontrado');
             }
-            return rdqa1;
+            return rdqa2;
         });
     }
 }
-exports.default = ShowRdqa1Service;
+exports.default = ShowRdqa2Service;
