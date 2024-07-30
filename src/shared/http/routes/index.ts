@@ -13,6 +13,8 @@ import programacaoAnual2024Router from '../../../modules/user/routes/Programacao
 import programacaoAnual2025Router from '../../../modules/user/routes/ProgramacaoAnual2025.routes';
 import rdqa1Router from '../../../modules/user/routes/rdqa1.routes';
 import rdqa2Router from '../../../modules/user/routes/rdqa2.routes';
+import rdqa3Router from '../../../modules/user/routes/rdqa3.routes';
+import rag2022Router from '../../../modules/user/routes/rag2022.routes';
 
 const routes = Router();
 
@@ -30,5 +32,7 @@ routes.use('/programacaoAnual2024', programacaoAnual2024Router);
 routes.use('/programacaoAnual2025', programacaoAnual2025Router);
 routes.use('/rdqa1', rdqa1Router);
 routes.use('/rdqa2', rdqa2Router);
+routes.use('/rdqa3', rdqa3Router);
+routes.use('/rag2022', rag2022Router);
 
 export default routes;

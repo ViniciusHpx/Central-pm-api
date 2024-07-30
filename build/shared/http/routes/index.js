@@ -18,6 +18,8 @@ const ProgramacaoAnual2024_routes_1 = __importDefault(require("../../../modules/
 const ProgramacaoAnual2025_routes_1 = __importDefault(require("../../../modules/user/routes/ProgramacaoAnual2025.routes"));
 const rdqa1_routes_1 = __importDefault(require("../../../modules/user/routes/rdqa1.routes"));
 const rdqa2_routes_1 = __importDefault(require("../../../modules/user/routes/rdqa2.routes"));
+const rdqa3_routes_1 = __importDefault(require("../../../modules/user/routes/rdqa3.routes"));
+const rag2022_routes_1 = __importDefault(require("../../../modules/user/routes/rag2022.routes"));
 const routes = (0, express_1.Router)();
 routes.use('/users', users_routes_1.default);
 routes.use('/avisos', avisos_routes_1.default);
@@ -33,4 +35,6 @@ routes.use('/programacaoAnual2024', ProgramacaoAnual2024_routes_1.default);
 routes.use('/programacaoAnual2025', ProgramacaoAnual2025_routes_1.default);
 routes.use('/rdqa1', rdqa1_routes_1.default);
 routes.use('/rdqa2', rdqa2_routes_1.default);
+routes.use('/rdqa3', rdqa3_routes_1.default);
+routes.use('/rag2022', rag2022_routes_1.default);
 exports.default = routes;
