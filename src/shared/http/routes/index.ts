@@ -17,6 +17,8 @@ import rdqa3Router from '../../../modules/user/routes/rdqa3.routes';
 import rag2022Router from '../../../modules/user/routes/rag2022.routes';
 import rag2023Router from '../../../modules/user/routes/rag2023.routes';
 import rag2024Router from '../../../modules/user/routes/rag2024.routes';
+import rag2025Router from '../../../modules/user/routes/rag2025.routes';
+import legislacaoRouter from '../../../modules/user/routes/legislacao.routes';
 
 const routes = Router();
 
@@ -38,5 +40,7 @@ routes.use('/rdqa3', rdqa3Router);
 routes.use('/rag2022', rag2022Router);
 routes.use('/rag2023', rag2023Router);
 routes.use('/rag2024', rag2024Router);
+routes.use('/rag2025', rag2025Router);
+routes.use('/legislacao', legislacaoRouter);
 
 export default routes;

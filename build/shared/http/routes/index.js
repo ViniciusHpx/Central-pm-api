@@ -22,6 +22,8 @@ const rdqa3_routes_1 = __importDefault(require("../../../modules/user/routes/rdq
 const rag2022_routes_1 = __importDefault(require("../../../modules/user/routes/rag2022.routes"));
 const rag2023_routes_1 = __importDefault(require("../../../modules/user/routes/rag2023.routes"));
 const rag2024_routes_1 = __importDefault(require("../../../modules/user/routes/rag2024.routes"));
+const rag2025_routes_1 = __importDefault(require("../../../modules/user/routes/rag2025.routes"));
+const legislacao_routes_1 = __importDefault(require("../../../modules/user/routes/legislacao.routes"));
 const routes = (0, express_1.Router)();
 routes.use('/users', users_routes_1.default);
 routes.use('/avisos', avisos_routes_1.default);
@@ -41,4 +43,6 @@ routes.use('/rdqa3', rdqa3_routes_1.default);
 routes.use('/rag2022', rag2022_routes_1.default);
 routes.use('/rag2023', rag2023_routes_1.default);
 routes.use('/rag2024', rag2024_routes_1.default);
+routes.use('/rag2025', rag2025_routes_1.default);
+routes.use('/legislacao', legislacao_routes_1.default);
 exports.default = routes;
