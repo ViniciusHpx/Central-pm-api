@@ -15,6 +15,8 @@ import rdqa1Router from '../../../modules/user/routes/rdqa1.routes';
 import rdqa2Router from '../../../modules/user/routes/rdqa2.routes';
 import rdqa3Router from '../../../modules/user/routes/rdqa3.routes';
 import rag2022Router from '../../../modules/user/routes/rag2022.routes';
+import rag2023Router from '../../../modules/user/routes/rag2023.routes';
+import rag2024Router from '../../../modules/user/routes/rag2024.routes';
 
 const routes = Router();
 
@@ -34,5 +36,7 @@ routes.use('/rdqa1', rdqa1Router);
 routes.use('/rdqa2', rdqa2Router);
 routes.use('/rdqa3', rdqa3Router);
 routes.use('/rag2022', rag2022Router);
+routes.use('/rag2023', rag2023Router);
+routes.use('/rag2024', rag2024Router);
 
 export default routes;
